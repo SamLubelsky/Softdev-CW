@@ -42,9 +42,6 @@ def array_front9(nums):
     if(nums[i] == 9):
       return True
   return False
-
-OR!!!!
-
 def array_front9(nums):
   counter = 0
   for i in nums:
