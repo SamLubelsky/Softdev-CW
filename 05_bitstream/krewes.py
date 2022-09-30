@@ -3,7 +3,7 @@ Jeff Chen, Samuel Lubelsky
 SoftDev
 K05 - Read, parse, and display contents of txt files containing pds, dev names, and ducky names.
 2022-9-29
-time spent:
+time spent: 45mins
 DISCO: 
 Use "with open() as f" with filename, mode to open a file for parsing.
 inputstring = file.read() to turn input into a string
