@@ -11,6 +11,12 @@ csvreader is not a list, it is a special python object called an iterable
 that must be iterated through with a for loop
 QCC:
 what exactly is an iterable and can they be converted to lists?
+OPS Summary:
+-reads the occupations.csv file using python's inbuilt csv reader.
+-first item of each row is a key, second item is a value in a dict
+-a rolling sum is used to pick a weighted random occupation.
+-testing to ensure the weighted picking is actually random runs the code many times
+and then displays how much each occupation showed up
 """
 
 jobs = {}
