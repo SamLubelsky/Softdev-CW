@@ -34,12 +34,13 @@ with open("./occupations.csv", 'r') as file:
 def choose_job(jobs: dict):
     randomJob = random.random()*99.8
     #print(randomJob)
-    chance = jobs[list(jobs)[0]]
+    chance = 0
+    #print(randomJob, chance)
     for e in jobs:
+        chance += jobs[e]
         if randomJob < chance:
             chosenJob = e
             break
-        chance = chance + jobs[e]
     return chosenJob
 def printJob(job):
     print("Chosen Job is " + job)
@@ -48,6 +49,16 @@ for _ in range(100):
     printJob(chosenJob)
 #additional tests
 num_tests = 1_000_000
-#for _ in range(num_tests):
+test_dict = {}
+for _ in range(num_tests):
+    job = choose_job(jobs)
+    if job not in test_dict:
+        test_dict[job] = 1
+    else:
+        test_dict[job] += 1
+for num in test_dict:
+    test_dict[num] /= num_tests
+print(test_dict)
+
 
 
