@@ -56,9 +56,9 @@ for _ in range(num_tests):
         test_dict[job] = 1
     else:
         test_dict[job] += 1
-for num in test_dict:
-    test_dict[num] /= num_tests
-print(test_dict)
+# for num in test_dict:
+#     test_dict[num] /= num_tests
+# print(test_dict)
 
 
 
