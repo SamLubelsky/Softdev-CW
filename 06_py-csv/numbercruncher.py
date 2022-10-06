@@ -1,5 +1,5 @@
 """
-Jeff Chen
+Jeff Chen, Samuel Lubelsky
 SoftDev
 K06 - Randomly select a job with weighted percentages
 2022-9-30
@@ -38,33 +38,24 @@ with open("./occupations.csv", 'r') as file:
   ##for e in jobs:
   ##    print(e)
 def choose_job(jobs: dict):
-    randomJob = random.random()*99.8
-    #print(randomJob)
-    chance = 0
-    #print(randomJob, chance)
-    for e in jobs:
-        chance += jobs[e]
-        if randomJob < chance:
-            chosenJob = e
-            break
-    return chosenJob
+    return random.choices(list(jobs), weights = list(jobs.values()))[0]
 def printJob(job):
     print("Chosen Job is " + job)
 for _ in range(100):
     chosenJob = choose_job(jobs)
     printJob(chosenJob)
 #additional tests
-# num_tests = 1_000_000
-# test_dict = {}
-# for _ in range(num_tests):
-#     job = choose_job(jobs)
-#     if job not in test_dict:
-#         test_dict[job] = 1
-#     else:
-#         test_dict[job] += 1
-# for num in test_dict:
-#     test_dict[num] /= num_tests
-# print(test_dict)
+num_tests = 1_000_000
+test_dict = {}
+for _ in range(num_tests):
+    job = choose_job(jobs)
+    if job not in test_dict:
+        test_dict[job] = 1
+    else:
+        test_dict[job] += 1
+for num in test_dict:
+    test_dict[num] /= num_tests
+print(test_dict)
 
 
 
