@@ -17,10 +17,12 @@ with open("./occupations.csv", 'r') as file:
   del jobs["Total"]
   ##for e in jobs:
   ##    print(e)
+
+#print random job from jobs dict
 def choose_job(jobs: dict):
     return random.choices(list(jobs), weights = list(jobs.values()))[0]
-def printJob(job):
-    print("Chosen Job is " + job)
+    
+#display page
 @app.route("/")
 def page():
     randomJob = choose_job(jobs)
@@ -42,4 +44,5 @@ def page():
     '''
     s = '<br>'.join(s.split("\n"))
     return s
+
 app.run()
