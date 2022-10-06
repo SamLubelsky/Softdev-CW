@@ -6,7 +6,17 @@ K06 - Randomly select a job with weighted percentages
 time spent: 45 min
 DISCO: 
 Built in CSV reader
+del dict[key] deletes a key from dictionary
+csvreader is not a list, it is a special python object called an iterable
+that must be iterated through with a for loop
 QCC:
+what exactly is an iterable and can they be converted to lists?
+OPS Summary:
+-reads the occupations.csv file using python's inbuilt csv reader.
+-first item of each row is a key, second item is a value in a dict
+-a rolling sum is used to pick a weighted random occupation.
+-testing to ensure the weighted picking is actually random runs the code many times
+and then displays how much each occupation showed up
 """
 
 jobs = {}
@@ -27,13 +37,34 @@ with open("./occupations.csv", 'r') as file:
 
   ##for e in jobs:
   ##    print(e)
+def choose_job(jobs: dict):
+    randomJob = random.random()*99.8
+    #print(randomJob)
+    chance = 0
+    #print(randomJob, chance)
+    for e in jobs:
+        chance += jobs[e]
+        if randomJob < chance:
+            chosenJob = e
+            break
+    return chosenJob
+def printJob(job):
+    print("Chosen Job is " + job)
+for _ in range(100):
+    chosenJob = choose_job(jobs)
+    printJob(chosenJob)
+#additional tests
+num_tests = 1_000_000
+test_dict = {}
+for _ in range(num_tests):
+    job = choose_job(jobs)
+    if job not in test_dict:
+        test_dict[job] = 1
+    else:
+        test_dict[job] += 1
+# for num in test_dict:
+#     test_dict[num] /= num_tests
+# print(test_dict)
 
-randomJob = random.random()*99.8
-print(randomJob)
 
-chance = jobs[list(jobs)[0]]
-for e in jobs:
-    if randomJob < chance:
-        print(e)
-        break
-    chance = chance + jobs[e]
+
