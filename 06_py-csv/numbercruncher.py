@@ -54,14 +54,14 @@ for _ in range(100):
     chosenJob = choose_job(jobs)
     printJob(chosenJob)
 #additional tests
-num_tests = 1_000_000
-test_dict = {}
-for _ in range(num_tests):
-    job = choose_job(jobs)
-    if job not in test_dict:
-        test_dict[job] = 1
-    else:
-        test_dict[job] += 1
+# num_tests = 1_000_000
+# test_dict = {}
+# for _ in range(num_tests):
+#     job = choose_job(jobs)
+#     if job not in test_dict:
+#         test_dict[job] = 1
+#     else:
+#         test_dict[job] += 1
 # for num in test_dict:
 #     test_dict[num] /= num_tests
 # print(test_dict)
