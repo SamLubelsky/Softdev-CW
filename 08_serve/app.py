@@ -10,9 +10,9 @@ with open("./occupations.csv", 'r') as file:
   csvreader = csv.reader(file)
   line_count = 0
   for row in csvreader:
-      if line_count != 0:
+      if line_count != 0:  #exclude first row of csv
           ##print(row)
-          jobs[row[0]] = float(row[1])
+          jobs[row[0]] = float(row[1]) #first value of csv line is key, second value is value
       line_count = line_count + 1
   del jobs["Total"]
   ##for e in jobs:
@@ -20,13 +20,13 @@ with open("./occupations.csv", 'r') as file:
 
 #print random job from jobs dict
 def choose_job(jobs: dict):
-    return random.choices(list(jobs), weights = list(jobs.values()))[0]
+    return random.choices(list(jobs), weights = list(jobs.values()))[0] #builtin weighted choice function
     
 #display page
 @app.route("/")
 def page():
-    randomJob = choose_job(jobs)
-    jobsString = ',\n'.join(list(jobs))
+    randomJob = choose_job(jobs) 
+    jobsString = ',\n'.join(list(jobs)) #put newlines between jobs
     s = f'''
     <!doctype html>
     <head>
@@ -42,7 +42,7 @@ def page():
     {jobsString}
     </body>
     '''
-    s = '<br>'.join(s.split("\n"))
+    s = '<br>'.join(s.split("\n")) #replace newlines with <br> for html formatting
     return s
 
 app.run()
