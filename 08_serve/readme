@@ -1,0 +1,7 @@
+from cgitb import html
+
+
+-reads in the file and constructs jobs dictionary at the beginning of the program
+(should only run once)
+-construct the website using a format string with html
+-a choosejob method is used to choose the job.

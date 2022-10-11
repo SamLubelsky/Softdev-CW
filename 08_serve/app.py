@@ -34,7 +34,7 @@ def page():
     Softdev Period 2
     k08
     2022-10-06
-    Time Spent: 0.3
+    Time Spent: 0.5
     </head>
     <body>
     {randomJob}
