@@ -25,7 +25,7 @@ def choose_job(jobs: dict):
 #display page
 @app.route("/")
 def page():
-    randomJob = choose_job(jobs) 
+    randomJob = choose_job(jobs)
     jobsString = ',\n'.join(list(jobs)) #put newlines between jobs
     s = f'''
     <!doctype html>
