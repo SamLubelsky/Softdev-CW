@@ -66,7 +66,7 @@ def authenticate():
             hash = hashlib.sha256(password.encode()).hexdigest()
             print(hash, totally_secure[username])
             if totally_secure[username] == hash:
-                return "congrates you made it"
+                return render_template("success.html", username=username)
         return "wrong password or username try again :("
     else: 
         # It seems that when trying this method with POST form request it breaks
