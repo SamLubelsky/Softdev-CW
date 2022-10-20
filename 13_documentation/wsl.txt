@@ -1,0 +1,27 @@
+Windows Subsystem for Linux(WSL) is a utility which allows windows users
+to have easy access to a linux environment.  This allows you to use bash and
+have full access to the linux commands you know and love on a windows machine.
+There are other options to do this such as dual booting(running two copies of the same os),using 
+a virtual machine, or using linux environments such as cygwin or mingw, 
+but I found WSL to be the most convenient and supported.
+
+Link to Installation Guide:
+https://learn.microsoft.com/en-us/windows/wsl/install
+-once you've done all the initial steps of installing wsl in powershell,
+I'd recommned just installing Ubuntu For Windows from the windows
+store, E
+
+Some things to note for getting started:
+-the home directory of WSL is stored in a pretty random location.  You can
+find this by typing "explorer.exe ." into the wsl terminal which will bring
+up the file explorer in your WSL home directory
+
+-all of your normal computer files(the stuff stored on your C and D drives)
+can be found in /mnt/.  You can access these anyway you would like here.
+
+-using Graphical User Interfaces in WSL is kinda weird because WSL cannot 
+load any of that stuff because it's just a shell.  This comes up when
+working with text editors if you're not using vim or nano.  VSCode has
+a WSL extension which pretty much manages all this for you and I am
+guessing other popular IDEs do as well.
+
