@@ -19,33 +19,33 @@ h1 {
 
 h2 {
     margin: 0px;
-    justify-content:center;
-    display:default;
 }
 
 body{
     background-color: #757776;
 }
 h3 {
-    margin-top: 0px;
     text-align: left;
     background-color: #757776;
+    margin: 0px;
 }
 
 #nav-bar {
-    margin:0;
     color: white;
     font-weight: bold;
+    padding-right: 75px;
+    padding-left:10px;
+    width:500px;
 }
-#header{
 
+#bar-title {
+    color: black;
 }
-#paragraph{
-    
-}
+
+
 #all-contents-foo{
   display:flex;
-  justify-content: right; 
+  justify-content: right;
 }
 
 footer {

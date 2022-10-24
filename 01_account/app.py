@@ -3,6 +3,7 @@
 # Oct 2022
 
 from functools import total_ordering
+from sre_constants import FAILURE
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
@@ -67,7 +68,7 @@ def authenticate():
             print(hash, totally_secure[username])
             if totally_secure[username] == hash:
                 return render_template("success.html", username=username)
-        return "wrong password or username try again :("
+        return render_template("failure.html")
     else: 
         # It seems that when trying this method with POST form request it breaks
         print("***DIAG: request.args['username']  ***")
