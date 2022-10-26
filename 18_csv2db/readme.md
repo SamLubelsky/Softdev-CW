@@ -7,3 +7,7 @@
 * have to use cursor to trigger db events
 * .commit() saves, .close() closes db
 * use DROP TABLE if exists <tb_name> to avoid identifer errors
+* .commands allow you to change the core functioning of sqlite or display global variables, some examples are:
+    * .headers: turn column headers on or off
+    * .mode: change how the table output is displayed
+    * .tables: display all table names
