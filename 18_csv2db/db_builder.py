@@ -19,10 +19,10 @@ courses_header = "(name TEXT, age NUMERIC, id NUMERIC)"   # run SQL statement
 students_header = "(name TEXT, age NUMERIC, id NUMERIC)"
 csv_to_db(c, "courses.csv","courses",courses_header)
 csv_to_db(c, "students.csv","students",students_header)
+s = c.execute("SELECT * from courses")
+print(s)
 
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
-
-
