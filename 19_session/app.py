@@ -5,7 +5,7 @@
 # time spent: 0.3 hr
 
 from flask import Flask             #facilitate flask webserving
-from flask import render_template   #facilitate jinja templating
+from flask import render_template, make_response   #facilitate jinja templating
 from flask import request           #facilitate form submission
 import os 
 
@@ -21,45 +21,25 @@ username = "ads"
 password = "admin"
 @app.route('/', methods=['GET','POST'])
 def disp_loginpage():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    return render_template( 'login.html' )
+    return render_template('login.html')
 
 
 @app.route("/response", methods=['GET', 'POST'])
 def authenticate():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    print("----------------")
-    print(request.form)
-    #request.form.get for post
-    #request.args[] for get
-    print("Cookies HERE:")
+    print("COOKIE INFO")
+    print(request.cookies.get("username"))
+    print(request.cookie.get("password"))
+    userIn = request.form.get('username')
+    passIn = request.form.get('password')
     print(request.cookies.get("username"))
     if(request.form.get("username") != username):
         return "wrong username"
     elif request.form.get("password") != password:
         return "wrong password"
     else:
-        return "welcome valued user!"
+        resp = make_response("welcome valued user!")
+        resp.set_cookie('username', userIn)
+        return resp
 
 
     
