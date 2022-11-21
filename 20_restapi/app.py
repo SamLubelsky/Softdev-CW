@@ -1,3 +1,8 @@
+# TBD: Sam Lubleksy
+# Softdev pd02
+# k20
+# 2022-11-21
+# time spent: 0.5hr
 import requests
 import json
 from flask import Flask, render_template
