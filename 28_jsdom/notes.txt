@@ -1,0 +1,6 @@
+-use document.body.innerHTML = to set the html body to a string value.
+-function syntax is var myFxn = function(a,b){}
+-=== to compare without implicit conversion
+-dynamically typed, no type declarations allowed
+-javascript doesn't error!!!
+-second function syntax: const Fxn = (param1, param2) => {}
