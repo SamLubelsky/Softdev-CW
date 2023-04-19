@@ -15,7 +15,6 @@
 
    A few comments have been pre-filled for you...
    
-   (delete this block comment once you are done)
 */
 
 // Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
