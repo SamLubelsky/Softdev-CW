@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!--
+     Team Casa Blanca -- Sam Cowan, Ameer Alnasser
+     SoftDev pd2
+     K28 -- Manipulating the DOM
+     2023-04-17
+   --------------------------------------------------
+-->
+
+<html lang="en">
+  <!-- HTML file for exploring JavaScript interactions with the DOM -->
+
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .red   {color : #ff0000;}
+      .green {color : #00ff00;}
+      .blue  {color : #0000ff;}
+    </style>
+  </head>
+
+  <body onload="myFxn(getRandomInt(10),getRandomInt(10))">
+    <h1 id="h" class="blue">Hello World!</h1>
+
+    <input type="text" id ="i1" placeholder="Enter n" size="10">
+    <button id="b1">fib(n)</button>
+    <p id="p1"></p>
+
+    <input type="text" id ="i2" placeholder="Enter n" size="10">
+    <button id="b2">fact(n)</button>
+    <p id="p2"></p>
+
+    <input type="text" id ="i3" placeholder="Enter a" size="10">
+    <br>
+    <input type="text" id ="i4" placeholder="Enter b" size="10">
+
+    <button id="b3">gcd(a,b)</button>
+    <p id="p3"></p>
+
+    <div id="div1" class="green">This is a div</div>
+    <div id="div2">This is a second div</div>
+    <div class="blue">This is a toid div</div>
+
+    <ol id="thelist">
+      <li class="">item 0</li>
+      <li class="green blue">item 1</li>
+      <li class="green blue">item 2</li>
+      <li class="red green blue">item 3</li>
+      <li class="red green blue">item 4</li>
+      <li class="green blue">item 5</li>
+      <li class="green blue">item 6</li>
+      <li class="">item 7</li>
+      <li class="green blue"></li>
+    </ol>
+    <script src="dommy_consolery.js"></script>
+  </body>
+</html>
