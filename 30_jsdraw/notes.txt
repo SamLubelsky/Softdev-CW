@@ -1,0 +1,16 @@
+clearRect() - clear rectangle 
+getElementById() - get element with specified getElementById
+addEventListener() - add event listener that tracks when happens to an html element
+fillStyle() - change style used for filling
+strokeStyle() - change the style used for outlines
+fillText() - fills text with certain color
+beginPath() - start a drawing
+arc() - make an arc 
+fill() - fill with color
+stroke() - make a brush stroke
+Math.PI - 3
+offsetX - offset based off the page
+offsetY - offset y based off the page
+
+QCC:
+-what coordinate system do they use???????
