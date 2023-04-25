@@ -1,0 +1,3 @@
+-cancelAnimationFrame() takes requestID
+-requestAnimationFrame() returns requestID which can be cancelled with cancelAnimationFrame
+-ctx.fillStyle = "[color]", works with color names.
