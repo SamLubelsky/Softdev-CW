@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Team speckies :: Shreya Roy, Maya Nelson
+       SoftDev pd2
+       K31 -- canvas based JS animation
+       2023-04-25t
+
+       HTML file for JavaScript canvas work
+  -->
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>The State of Animania</title>
+  </head>
+
+  <style>
+    #playground { border: 1px solid black }
+  </style>
+
+  <h1>expansion + contraction</h1>
+
+  <div>
+    <button id="buttonCircle">
+      I'm an Animaniac!
+    </button>
+
+    <button id="buttonDVD">
+        I'm waiting for the movie to start
+      </button>
+
+    <button id="buttonStop">
+      STOP
+    </button>
+
+  </div>
+
+  <div style="display:none;">
+    <img id="source" src="logo_dvd.jpg" width="30" height="20" />
+  </div>
+
+  <canvas width="500" height="500" id="playground">
+ 
+  </canvas>
+
+  <script src="animate.js"></script>
+
+</html>
