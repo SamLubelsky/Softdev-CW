@@ -1,0 +1,11 @@
+<!-- Sam^2
+     SoftDev pd2
+     Spring 2023
+     HTML file for exploring DOM event propogation using JavaScript
+-->
+-when an inner element is clicked on, all elements that the click is inside of are called, with the order of calling
+being from innermost --> outermost
+-boolean argument in .addEventListener() gives whatever element its set for priority in terms of the order in which inner-outer
+elements are called
+-if multiple eventListeners are set to true, the order of calling is outermost --> innermost
+-alert(x) puts pop up on screen with text x.
